@@ -25,6 +25,19 @@ h3.title_3{font-size:18px; color: #fff;  text-align: center; padding: 10px; back
 .tab_1 .tab_menu a.active{ background: #656565; color: #fff;}
 
 
+/*768px*/
+@media only screen and (max-width:768px){
+    .tab_1 .tab_menu{ border: 0px; border-top: 1px solid #656565}
+    .tab_1 .tab_menu a{ border: 0px;}
+    .tab_1 .tab_menu a:hover{ background: transparent; color: #333333;}
+    .tab_1 .tab_menu a.active{ background:#fff; color: #333333; }
+    .tab_1 .tab_menu a.active:after,.tab_1 .tab_menu a:hover:after{ content: ""; display: block; width: 80px; height: 1px; margin: 5px auto; background: #333333;}
+    
+}
+
+
+
+
 /*more_box================*/
 .more_box{ text-align: center;}
 .more_box .btn_more{ display: inline-block; padding: 10px; font-size: 14px; letter-spacing: 10px; color: #fff; border-radius: 50px; background: #656565;}
