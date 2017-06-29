@@ -43,14 +43,9 @@ h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; b
 
 
 /*麵包屑===========================AB*/
-<<<<<<< HEAD
 .part_breadcrumb_1{}
 .part_breadcrumb_1>a,.part_breadcrumb_1 span.current{ font-size: 14px; color: $gray_dark;}
 .part_breadcrumb_1>a:hover{ color: $gray;}
-=======
-.part_breadcrumb_1{ border: 1px solid red;}
-.part_breadcrumb_1>a{}
->>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 .part_breadcrumb_1 span.current::before{content: "/"; display: inline-block; margin: 0px 10px;}
 .part_breadcrumb_1 span.current{}
 
@@ -182,11 +177,7 @@ background:url("../images/icon_input_select-01.svg") no-repeat scroll right cent
 /*form_2================AB*/
 .form_2 .item { position: relative;}
 .form_2 .item label { display: block; font-size:14px; margin-bottom: 10px;}
-<<<<<<< HEAD
 .form_2 .item select#color_pick { display: block; width: 100%; height: 35px; border: 1px solid red;}
-=======
-.form_2 .item select { width: 100%; height: 35px}
->>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 
 
 
@@ -195,7 +186,6 @@ background:url("../images/icon_input_select-01.svg") no-repeat scroll right cent
 .align_right { text-align: right; }
 .aligncenter { text-align: center; }
 
-<<<<<<< HEAD
 /* part_thumb_1 商品列表========================AB*/
 .part_thumb_1{ @extend %clearfix; border: 1px solid red;}
 .part_thumb_1 .piece{width: 270px; float: left; margin-bottom: 32px;}
@@ -221,7 +211,5 @@ background:url("../images/icon_input_select-01.svg") no-repeat scroll right cent
 .part_pictxt_1 .piece h3{ border-bottom: 1px solid $gray;}
 .part_pictxt_1 .piece p.date{}
 .part_pictxt_1 .piece p.summary{}
-=======
->>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 
 
