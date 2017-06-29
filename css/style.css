@@ -97,11 +97,19 @@ input, select {
   text-indent: 100%;
   overflow: hidden; }
 
+<<<<<<< HEAD
 .btn_box_two:after, .tab_1 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after, .btn_box_two:before, .tab_1 .tab_menu:before, .part_thumb_1:before, .part_pictxt_1:before {
   content: "";
   display: table; }
 
 .btn_box_two:after, .tab_1 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after {
+=======
+.btn_box_two:after, .tab_1 .tab_menu:after, .btn_box_two:before, .tab_1 .tab_menu:before {
+  content: "";
+  display: table; }
+
+.btn_box_two:after, .tab_1 .tab_menu:after {
+>>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
   clear: both; }
 
 /* global */
@@ -334,12 +342,17 @@ h3.title_3 {
   border: 1px solid #333; }
 
 /*麵包屑===========================AB*/
+<<<<<<< HEAD
 .part_breadcrumb_1 > a, .part_breadcrumb_1 span.current {
   font-size: 14px;
   color: #333; }
 
 .part_breadcrumb_1 > a:hover {
   color: #666; }
+=======
+.part_breadcrumb_1 {
+  border: 1px solid red; }
+>>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 
 .part_breadcrumb_1 span.current::before {
   content: "/";
@@ -617,11 +630,17 @@ h3.title_3 {
   font-size: 14px;
   margin-bottom: 10px; }
 
+<<<<<<< HEAD
 .form_2 .item select#color_pick {
   display: block;
   width: 100%;
   height: 35px;
   border: 1px solid red; }
+=======
+.form_2 .item select {
+  width: 100%;
+  height: 35px; }
+>>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 
 /**********************************************************微調****************************************************************************/
 .align_left {
@@ -633,6 +652,7 @@ h3.title_3 {
 .aligncenter {
   text-align: center; }
 
+<<<<<<< HEAD
 /* part_thumb_1 商品列表========================AB*/
 .part_thumb_1 {
   border: 1px solid red; }
@@ -693,6 +713,8 @@ h3.title_3 {
 .part_pictxt_1 .piece h3 {
   border-bottom: 1px solid #666; }
 
+=======
+>>>>>>> 23e3f7fffb7f38e3a20cc2d6c0f9fa88f5bc3d7c
 /* page */
 /* CSS Document */
 .section-member-login {
