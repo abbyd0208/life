@@ -4,27 +4,51 @@
 $(function(){
     //選單高度
     var iWinH;
+    var menuState;
 
     // 選單打開
     function fnOpen(){
         iWinH = window.innerHeight;
+        menuState = 1;
         $(".wrapper").css({"height":iWinH,"overflow":"hidden"}).addClass("side_open");
-        $("#main_nav").css({"height":iWinH}).fadeIn();
+        $("#main_nav").css({"height":iWinH}).addClass("menu_open").fadeIn();
     }
 
     function fnClose(){
         $(".wrapper").css({"height":"auto","overflow":"visible"}).removeClass("side_open");
-        $("#main_nav").css({"height":"auto"}).fadeOut();
+        $("#main_nav").css({"height":"auto"}).removeClass("menu_open").fadeOut();
         //回到桌機版時選單會消失
     }
 
-    //重新計算高度   加setTimeOut
-    $(window).on("resize", function(){
+    //resize
+    function deviceChange(){
         iWinH = window.innerHeight;
+        menuState = 0;
         $("#main_nav").css({"height":iWinH});
-    });
 
-    //旋轉關閉選單
+        if($(window).width() > 768) {
+            //桌機
+            $("#main_nav .inner > ul > li").addClass("menu_hover");//取消hover樣式
+            $("#main_nav").css({"display":"block","height":"auto"});//回到桌機版時選單會消失，高度復原
+            $(".wrapper").removeClass("side_open");//回到桌機版時覆蓋那層會顯現
+        }else if($(window).width() < 769){
+            //("平板")
+            $("#main_nav .inner > ul > li").removeClass("menu_hover");   
+            $(".top_bar .menu_2 .operate .pc_only").removeClass("menu_hover");
+            if($("#main_nav ").hasClass("menu_open")){
+                $("#main_nav").css({"display":"block"});
+            }else{
+                $("#main_nav").css({"display":"none"});
+            }
+        }
+    } 
+    
+    deviceChange();
+
+    //重新計算高度   加setTimeOut
+    $(window).on("resize",deviceChange);;
+
+
 
     //點擊
     $(".wrapper").on("click", ".btn_side_open",fnOpen);
@@ -59,27 +83,6 @@ $(function(){
         }
     });
 
-
-    //寬度改變
-    function deviceChange(){
-        //取消hover樣式
-        if($(window).width() > 768) {
-            $("#main_nav .inner > ul > li").addClass("menu_hover");
-            $("#main_nav").css({"display":"block","height":"auto"});//回到桌機版時選單會消失，高度復原
-            $(".wrapper").removeClass("side_open");//回到桌機版時覆蓋那層會顯現
-           
-        }else if($(window).width() < 769){
-            //("平板")
-            $("#main_nav .inner > ul > li").removeClass("menu_hover");
-            $("#main_nav").css({"display":"none"});
-        }
-    } 
-    
-
-    deviceChange();
-
-    //resize 加setTimeOut
-    $(window).resize(deviceChange);
 });
 
 
@@ -183,18 +186,22 @@ $(function(){
 
 // range===================================
 $(function(){
-    var $range = $("#range");
+
+    if($("#range").length>0){
+        var $range = $("#range");
         $range.ionRangeSlider({
-        min: 0,
-        max: 5000,
-        from: 1000,
-        to: 4000,
-        type: 'double',
-        step: 1,
-        prefix: "$",
-        onFinish: function (data) {
-            alert("最低"+data.from+"元+最低金額"+data.to);
-        }
-    });
-    
+            min: 0,
+            max: 5000,
+            from: 1000,
+            to: 4000,
+            type: 'double',
+            step: 1,
+            prefix: "$",
+            onFinish: function (data) {
+            alert("最低"+data.from+"元 + 最低金額"+data.to);
+            }
+        });
+
+    }
+   
 });

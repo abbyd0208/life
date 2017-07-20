@@ -97,11 +97,11 @@ input, select {
   text-indent: 100%;
   overflow: hidden; }
 
-.top_bar:after, .top_bar .menu_2 ul:after, #main_nav .inner > ul:after, #main_nav .inner ul.second:after, .layout_col_2:after, .btn_box_two:after, .tab_1 .tab_menu:after, .tab_3 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after, .section_cart:after, .discount .box_1 .item:after, .order_block:after, .table_1 tbody tr:after, .order_detail:after, .section_member_center .group_1 p:after, .return_apply:after, .return_rule:after, .album .row:after, .section_product_detail:after, .section_product_detail .area:after, .gallery_2 .run:after, .top_bar:before, .top_bar .menu_2 ul:before, #main_nav .inner > ul:before, #main_nav .inner ul.second:before, .layout_col_2:before, .btn_box_two:before, .tab_1 .tab_menu:before, .tab_3 .tab_menu:before, .part_thumb_1:before, .part_pictxt_1:before, .section_cart:before, .discount .box_1 .item:before, .order_block:before, .table_1 tbody tr:before, .order_detail:before, .section_member_center .group_1 p:before, .return_apply:before, .return_rule:before, .album .row:before, .section_product_detail:before, .section_product_detail .area:before, .gallery_2 .run:before {
+.top_bar:after, .top_bar .menu_2 ul:after, #main_nav .inner > ul:after, #main_nav .inner ul.second:after, .layout_col_2:after, .btn_box_two:after, .tab_1 .tab_menu:after, .tab_3 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after, .section_cart:after, .discount .box_1 .item:after, .order_block:after, .table_1 tbody tr:after, .order_detail:after, .section_member_center .group_1 p:after, .return_apply:after, .return_rule:after, .album .row:after, .section_product_detail:after, .section_product_detail .area:after, .gallery_2 .run:after, .section_product_list .select_box .item_2 .sub .oprate:after, .top_bar:before, .top_bar .menu_2 ul:before, #main_nav .inner > ul:before, #main_nav .inner ul.second:before, .layout_col_2:before, .btn_box_two:before, .tab_1 .tab_menu:before, .tab_3 .tab_menu:before, .part_thumb_1:before, .part_pictxt_1:before, .section_cart:before, .discount .box_1 .item:before, .order_block:before, .table_1 tbody tr:before, .order_detail:before, .section_member_center .group_1 p:before, .return_apply:before, .return_rule:before, .album .row:before, .section_product_detail:before, .section_product_detail .area:before, .gallery_2 .run:before, .section_product_list .select_box .item_2 .sub .oprate:before {
   content: "";
   display: table; }
 
-.top_bar:after, .top_bar .menu_2 ul:after, #main_nav .inner > ul:after, #main_nav .inner ul.second:after, .layout_col_2:after, .btn_box_two:after, .tab_1 .tab_menu:after, .tab_3 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after, .section_cart:after, .discount .box_1 .item:after, .order_block:after, .table_1 tbody tr:after, .order_detail:after, .section_member_center .group_1 p:after, .return_apply:after, .return_rule:after, .album .row:after, .section_product_detail:after, .section_product_detail .area:after, .gallery_2 .run:after {
+.top_bar:after, .top_bar .menu_2 ul:after, #main_nav .inner > ul:after, #main_nav .inner ul.second:after, .layout_col_2:after, .btn_box_two:after, .tab_1 .tab_menu:after, .tab_3 .tab_menu:after, .part_thumb_1:after, .part_pictxt_1:after, .section_cart:after, .discount .box_1 .item:after, .order_block:after, .table_1 tbody tr:after, .order_detail:after, .section_member_center .group_1 p:after, .return_apply:after, .return_rule:after, .album .row:after, .section_product_detail:after, .section_product_detail .area:after, .gallery_2 .run:after, .section_product_list .select_box .item_2 .sub .oprate:after {
   clear: both; }
 
 /* global */
@@ -350,7 +350,7 @@ h5 {
     background: #666;
     position: fixed;
     bottom: 0px;
-    z-index: 400; }
+    z-index: 200; }
   .top_bar .menu_1 {
     display: none; }
   .top_bar > .menu_2 {
@@ -421,8 +421,6 @@ h5 {
 
 /*$mobileS (360)*/
 @media only screen and (max-width: 360px) {
-  .top_bar {
-    height: 45px; }
   .top_bar > .menu_2 {
     width: 276px; }
   .top_bar .menu_2 li:not(:nth-last-of-type(1)) {
@@ -431,7 +429,7 @@ h5 {
     width: 60px;
     height: 40px;
     background-size: auto 22px;
-    padding-top: 15px; }
+    padding-top: 18px; }
   .top_bar .menu_2 li a.blog {
     background-size: auto 18px; }
   .top_bar .menu_2 li a.member {
@@ -545,6 +543,12 @@ h5 {
     left: 260px; } }
 
 /*nav===================================*/
+#main_nav.pc {
+  display: none; }
+
+#main_nav.mobile {
+  display: block; }
+
 #main_nav {
   display: block;
   width: 100%;
@@ -2954,10 +2958,16 @@ h3.title_3 {
 .section_product_list .select_box .item_1 {
   position: relative; }
 
-.section_product_list .select_box .item_1 a {
+.section_product_list .select_box .item_1 > a, .section_product_list .select_box .item_2 a {
   display: block;
   text-align: center;
-  line-height: 45px; }
+  line-height: 45px;
+  background: #fff; }
+
+.section_product_list .select_box .item_1 > a, .section_product_list .select_box .item_2 > a {
+  padding-right: 15px;
+  background: url(../images/icon_arrow_5.png) 90% 50% no-repeat;
+  background-size: auto 20%; }
 
 .section_product_list .select_box .item_1 a + .sub {
   position: absolute;
@@ -2976,17 +2986,17 @@ h3.title_3 {
   display: block; }
 
 /*item_2===========*/
-.section_product_list .select_box .item_2 a {
-  display: block;
-  text-align: center;
-  line-height: 45px; }
+.section_product_list .select_box .item_2 {
+  position: relative; }
 
 .section_product_list .select_box .item_2 a + .sub {
   width: 258px;
   border: 1px solid #666;
   background: #fff;
   padding: 20px;
-  position: relative;
+  position: absolute;
+  left: 0px;
+  top: 45px;
   z-index: 5;
   display: none; }
 
@@ -3036,7 +3046,7 @@ h3.title_3 {
 
 /*oprate*/
 .section_product_list .select_box .item_2 .sub .oprate {
-  width: 120px;
+  width: 110px;
   height: 30px;
   position: absolute;
   right: 0px;
@@ -3047,7 +3057,11 @@ h3.title_3 {
   background: transparent;
   letter-spacing: 3px;
   font-size: 16px;
-  color: gray; }
+  color: gray;
+  float: left; }
+
+.section_product_list .select_box .item_2 .sub .oprate span {
+  float: left; }
 
 @media only screen and (max-width: 768px) {
   .section_product_list .part_breadcrumb_1 {
@@ -3060,7 +3074,10 @@ h3.title_3 {
     width: 40%;
     margin: 0 6%; }
   .section_product_list .select_box .select:nth-of-type(1) {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .section_product_list .select_box .item_2 a + .sub {
+    left: auto;
+    right: 0px; } }
 
 /* CSS Document */
 .section_blog .gallery_1 {
