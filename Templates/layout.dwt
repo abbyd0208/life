@@ -97,16 +97,16 @@
                     </div>
                     <ul>
                         <li class="menu_hover">
-                            <a class="first" href="blog.htm"><span><img src="../images/icon_1.png" alt=""></span>生活日誌</a>
+                            <a href="blog.htm"><span><img src="../images/icon_1.png" alt=""></span>生活日誌</a>
                         </li>
                         <li class="menu_hover">
-                            <a class="first" href="product_list.htm"><span><img src="../images/icon_2.png" alt=""></span>人氣商品</a>
+                            <a href="product_list.htm"><span><img src="../images/icon_2.png" alt=""></span>人氣商品</a>
                         </li>
                         <li class="menu_hover">
-                            <a class="first" href="product_list.htm"><span><img src="../images/icon_3.png" alt=""></span>最新商品</a>
+                            <a href="product_list.htm"><span><img src="../images/icon_3.png" alt=""></span>最新商品</a>
                         </li>
                         <li class="menu_hover">
-                            <a class="first" href="onsale.htm"><span><img src="../images/icon_4.png" alt=""></span>促銷活動</a>
+                            <a href="onsale.htm"><span><img src="../images/icon_4.png" alt=""></span>促銷活動</a>
                         </li>
                         <li class="menu_hover">
                             <a class="first" href="product_list.htm"><span><img src="../images/icon_5.png" alt=""></span>居家雜貨</a>
@@ -269,21 +269,32 @@
                                         <a href="product_list.htm">復古工業系列</a>
                                     </div>
                                 </li>
+                                <li><a href="product_list.htm">居家風格</a>
+                                    <div class="third">
+                                        <a href="product_list.htm">銀河系列</a>
+                                        <a href="product_list.htm">波希米亞系列</a>
+                                        <a href="product_list.htm">美式風格系列</a>
+                                        <a href="product_list.htm">復古工業系列</a>
+                                    </div>
+                                </li>
+                                <li class="mobile_only"><a href="product_list.htm">居家風格</a>
+                                    <div class="third">
+                                        <a href="product_list.htm">銀河系列</a>
+                                        <a href="product_list.htm">波希米亞系列</a>
+                                        <a href="product_list.htm">美式風格系列</a>
+                                        <a href="product_list.htm">復古工業系列</a>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
-                        <li class="menu_hover">
-                            <a class="first" href="product_list.htm">
-                                <span><img src="../images/icon_5.png" alt=""></span>預留分類
+                        <li class="menu_hover mobile_only">
+                            <a href="shop_guide_buy.htm">
+                                <span><img src="../images/icon_5.png" alt="購物指南"></span>購物指南
                             </a>
                         </li>
-                        <li class="menu_hover">
-                            <a class="first" href="product_list.htm">
-                                <span><img src="../images/icon_5.png" alt=""></span>預留分類
-                            </a>
-                        </li>
-                        <li class="menu_hover">
-                            <a class="first" href="product_list.htm">
-                                <span><img src="../images/icon_5.png" alt=""></span>選單最後
+                        <li class="menu_hover mobile_only">
+                            <a href="about_us.htm">
+                                <span><img src="../images/icon_5.png" alt="關於生活倉庫"></span>關於生活倉庫
                             </a>
                         </li>
                     </ul>

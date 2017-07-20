@@ -263,7 +263,7 @@ h5 {
 
 /*menu_2 search*/
 .top_bar > .menu_2 {
-  width: 335px;
+  width: 300px;
   height: 30px;
   float: right;
   position: relative;
@@ -300,10 +300,17 @@ h5 {
   text-align: center;
   color: #666;
   background: url(../images/icon_cart.png) center center no-repeat;
-  background-size: auto 25px; }
+  background-size: auto 25px;
+  position: relative; }
 
 .top_bar .menu_2 li a.cart strong {
-  font-size: 12px; }
+  font-size: 12px;
+  text-indent: 0;
+  overflow: visible;
+  color: #666;
+  position: absolute;
+  left: 11px;
+  top: 7px; }
 
 .top_bar .menu_2 li a.fb {
   background: url(../images/icon_fb.png) center center no-repeat;
@@ -383,8 +390,7 @@ h5 {
     position: absolute;
     top: 10px;
     left: 50%;
-    margin-left: -4px;
-    color: #666; }
+    margin-left: -4px; }
   .top_bar .menu_2 li a.fb {
     background-size: auto 30px;
     background-position: top center; } }
@@ -589,6 +595,9 @@ h5 {
   display: block;
   /*到手機版的時候要remove menu_hover*/ }
 
+#main_nav .inner > ul > li.mobile_only {
+  display: none; }
+
 /*第二層*/
 #main_nav .inner ul.second {
   width: 100%;
@@ -655,10 +664,18 @@ h5 {
     float: none;
     height: auto;
     line-height: 3; }
+  #main_nav .inner > ul > li.mobile_only {
+    display: block;
+    background: #666; }
+  #main_nav .inner > ul > li.mobile_only a {
+    color: #fff;
+    background: none; }
   #main_nav .inner > ul > li > a {
     padding: 0px;
     width: auto;
-    text-align: left; }
+    text-align: left;
+    background: url(../images/icon_arrow_4.png) right center no-repeat;
+    background-size: auto 25%; }
   #main_nav .inner > ul > li > a > span {
     display: none; }
   /*M顯示第二層選單*/
@@ -3199,9 +3216,6 @@ h3.title_3 {
 
 /*顏色*/
 /*========================global=======================*/
-.gototop {
-  background: #666; }
-
 /*=============================layout===============================*/
 .wrapper.side_open::before {
   background: rgba(0, 0, 0, 0.5); }
@@ -3239,6 +3253,8 @@ h3.title_3 {
     background: #666; }
   .top_bar .menu_2 li > a {
     color: #fff; }
+  .top_bar .menu_2 li a.cart {
+    color: #fff; }
   .top_bar .menu_2 li a.cart strong {
     color: #666; } }
 
@@ -3273,6 +3289,10 @@ h3.title_3 {
 @media only screen and (max-width: 768px) {
   #main_nav {
     background: #e0e0e0; }
+  #main_nav .inner > ul > li.mobile_only {
+    background: #666; }
+  #main_nav .inner > ul > li.mobile_only a {
+    color: #fff; }
   #main_nav .inner ul.second {
     background: #fff; }
   #main_nav .inner ul.second .third {

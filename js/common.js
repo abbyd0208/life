@@ -41,13 +41,14 @@ $(function(){
 
     // 第一層
     first.on("click",function(e){
-        e.preventDefault;   //解除連結效果
+        e.preventDefault();   //解除連結效果
         first.removeClass("show_second");
         $(this).addClass("show_second");
     });
 
     // 第二層
     second.on("click",function(e){
+
         second.removeClass("show_third");
         $(this).addClass("show_third");
         
@@ -58,19 +59,23 @@ $(function(){
         }
     });
 
+
     //寬度改變
     function deviceChange(){
         //取消hover樣式
-        if(window.innerWidth <= 768) {
+        if($(window).width() > 768) {
+            $("#main_nav .inner > ul > li").addClass("menu_hover");
+            $("#main_nav").css({"display":"block","height":"auto"});//回到桌機版時選單會消失，高度復原
+            $(".wrapper").removeClass("side_open");//回到桌機版時覆蓋那層會顯現
+           
+        }else if($(window).width() < 769){
             //("平板")
             $("#main_nav .inner > ul > li").removeClass("menu_hover");
-        }else{
-            $("#main_nav .inner > ul > li").addClass("menu_hover");
-            $("#main_nav").css({"height":"auto"});//回到桌機版時選單會消失，高度復原
-            $(".wrapper").removeClass("side_open");//回到桌機版時覆蓋那層會顯現
+            $("#main_nav").css({"display":"none"});
         }
     } 
     
+
     deviceChange();
 
     //resize 加setTimeOut

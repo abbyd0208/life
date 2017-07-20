@@ -16,17 +16,17 @@
 .top_bar .menu_1 a{ font-size: 14px; @include link($white,$gray_light)}
 .top_bar .menu_1 a:not(:nth-last-child(1))::after{ content: "|"; display: inline-block; color: $white; margin: 0 5px;}
 /*menu_2 search*/
-.top_bar>.menu_2{ width:335px; height: 30px;  float: right; position: relative; top: 15px; }
+.top_bar>.menu_2{ width:300px; height: 30px;  float: right; position: relative; top: 15px; }
 .top_bar .menu_2 .search_box{width: 200px; left: 0px; top: 0px; }
 
 /*menu_2*/
 .top_bar .menu_2 ul{@extend %clearfix; position: absolute; right: 0px; top: 0px;}
 .top_bar .menu_2 li{position:relative; float: left;}
-.top_bar .menu_2 li>a{ display: block; width: 30px; height: 27px; @extend %text-hide;}
+.top_bar .menu_2 li > a{ display: block; width: 30px; height: 27px; @extend %text-hide;}
 .top_bar .menu_2 li a.blog{display: none;}
 .top_bar .menu_2 li a.member{background: url(../images/icon_member.png) center center no-repeat;background-size: auto 25px;}
-.top_bar .menu_2 li a.cart{ text-align: center; color: $gray; background: url(../images/icon_cart.png) center center no-repeat;background-size: auto 25px;}
-.top_bar .menu_2 li a.cart strong{ font-size: 12px;}
+.top_bar .menu_2 li a.cart{ text-align: center; color: $gray; background: url(../images/icon_cart.png) center center no-repeat;background-size: auto 25px; position: relative;}
+.top_bar .menu_2 li a.cart strong{ font-size: 12px; text-indent:0; overflow:visible;color: $gray;position: absolute; left: 11px; top: 7px;}
 .top_bar .menu_2 li a.fb{background: url(../images/icon_fb.png) center center no-repeat; background-size: auto 25px; }
 /*hover效果*/
 .top_bar .menu_2 li.menu_hover:hover a.member + .sub_menu{display: block;} 
@@ -48,12 +48,12 @@
     .top_bar .menu_2 ul{position: static;}
     .top_bar .menu_2 li{}
     .top_bar .menu_2 li:not(:nth-last-of-type(1)){margin-right: 60px;}
-    .top_bar .menu_2 li>a{ width: 60px; height:50px; padding-top: 32px; overflow:visible;text-indent:0; font-size: 14px; color: $white;}
- 
+    .top_bar .menu_2 li>a{ width: 60px; height:50px; padding-top: 32px; overflow:visible; text-indent:0; font-size: 14px; color: $white;}
+
     .top_bar .menu_2 li a.blog{ display:block; background: url(../images/icon_blog.png) top center no-repeat; background-size: auto 30px; }
     .top_bar .menu_2 li a.member{background-size: auto 30px; background-position: top center;}
     .top_bar .menu_2 li a.cart{background-size: auto 30px;background-position: top center;color: $white; position: relative;}
-    .top_bar .menu_2 li a.cart strong{ position: absolute; top: 10px; left: 50%; margin-left: -4px; color: $gray;}
+    .top_bar .menu_2 li a.cart strong{ position: absolute; top: 10px; left: 50%; margin-left: -4px; }
     .top_bar .menu_2 li a.fb{background-size: auto 30px;background-position: top center;}
 }
 
@@ -149,6 +149,7 @@
 /*第二層選單效果寫在.menu_hover上 顯示第二層選單 手機版移除效果 */
 #main_nav .inner > ul > li.menu_hover:hover > a{color: $red;}
 #main_nav .inner > ul > li.menu_hover:hover ul.second { display: block;/*到手機版的時候要remove menu_hover*/}
+#main_nav .inner > ul > li.mobile_only{display: none;}
 
 /*第二層*/
 #main_nav .inner ul.second{ width: 100%;max-width: 1220px; background:$white;  @extend %clearfix; border: 1px solid $gray_lighter;position: absolute; left: 0px; top:66px; z-index: 50;  display: none; }
@@ -174,8 +175,10 @@
     /*第一層===============*/
     #main_nav{ min-width: auto; width: 300px; height: 100%;/*要用程式取*/ background: $gray_menu;  border-bottom:0px ; padding-bottom:0px; position: fixed; left:0px; top: 0px; z-index:500; display:none;/*測試時打開*/ }
     #main_nav .inner{height: 100%; overflow-y: auto; }
-    #main_nav .inner > ul > li{ float: none; height: auto; line-height: 3;}
-    #main_nav .inner > ul > li > a{ padding: 0px; width: auto; text-align: left;}
+    #main_nav .inner > ul > li{ float: none; height: auto; line-height: 3; }
+    #main_nav .inner > ul > li.mobile_only{display: block; background: $gray; }
+    #main_nav .inner > ul > li.mobile_only a{color: $white; background: none;}
+    #main_nav .inner > ul > li > a{ padding: 0px; width: auto; text-align: left; background: url(../images/icon_arrow_4.png) right center no-repeat; background-size:auto 25%;}
     #main_nav .inner > ul > li > a > span{display: none;}
     /*M顯示第二層選單*/
     #main_nav .inner > ul > li > a.show_second + ul.second{ display: block;}
