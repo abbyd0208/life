@@ -38,8 +38,8 @@ ol, ul{ list-style:none;}
 	@extend %text-hide;
 	width:45px; 
 	height:45px; 
-	background:$gray url(../images/gototop.png) no-repeat center center; 
-	background-size:100% auto;
+	background:$gray url(../images/gototop.svg) no-repeat center center; 
+	background-size:65% auto;
 	position:fixed; 
 	right:5px; 
 	bottom:30px; 

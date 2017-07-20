@@ -98,82 +98,86 @@
 
 
 
-//加購商品======================================== 
-.gallery_3{position: relative; }
+// //加購商品======================================== 
+// .gallery_3{position: relative; }
 
-/*外掛歸零*/
-.gallery_3 .bx-wrapper{ max-width: 1060px!important;}
-.gallery_3 .bx-wrapper .bx-viewport{  box-shadow:none; border:none; left:0px;}
-
-
-
-/*pc (1024)*/
-@include breakpoint($pc){
-    .gallery_3 .bx-wrapper{ max-width: 840px!important;}
-}
-
-
-// pad (768)
-@media only screen and (max-width:768px) {
-   .gallery_3 .bx-wrapper{ max-width: 525px!important;} 
-}
-
-/*滾動組*/
-.gallery_3 .run{ @extend %clearfix; }
-.gallery_3 .run .inner{}
-
-// 方向鍵
-.gallery_3 .bx-wrapper .bx-controls-direction a{ width: 24px; height: 34px;}
-.gallery_3 .bx-wrapper .bx-prev{left: -50px; background: url(../images/icon_arrow_3.png) left top no-repeat; background-size: auto 70px; }
-.gallery_3 .bx-wrapper .bx-next{right: -50px;background: url(../images/icon_arrow_3.png) right top no-repeat; background-size: auto 70px; }
-/*hover*/
-.gallery_3 .bx-wrapper .bx-prev:hover{ background-position: left bottom;}
-.gallery_3 .bx-wrapper .bx-next:hover{ background-position: right bottom;}
+// /*外掛歸零*/
+// .gallery_3 .bx-wrapper{ max-width: 1060px!important;}
+// .gallery_3 .bx-wrapper .bx-viewport{  box-shadow:none; border:none; left:0px;}
 
 
 
-/*組*/
-.gallery_3 .run .inner .piece{ margin-right: 15px;}
-.gallery_3 .run .inner .piece .btn{ margin: 0px;}
+// /*pc (1024)*/
+// @include breakpoint($pc){
+//     .gallery_3 .bx-wrapper{ max-width: 840px!important;}
+// }
 
-/*圖片*/
-.gallery_3 .run .inner .piece a.pic{ display:block;}
-.gallery_3 .run .inner .piece a.pic img{ display: none;}
+
+// // pad (768)
+// @media only screen and (max-width:768px) {
+//    .gallery_3 .bx-wrapper{ max-width: 525px!important;} 
+// }
+
+// /*滾動組*/
+// .gallery_3 .run{ @extend %clearfix; }
+// .gallery_3 .run .inner{}
+
+// // 方向鍵
+// .gallery_3 .bx-wrapper .bx-controls-direction a{ width: 24px; height: 34px;}
+// .gallery_3 .bx-wrapper .bx-prev{left: -50px; background: url(../images/icon_arrow_3.png) left top no-repeat; background-size: auto 70px; }
+// .gallery_3 .bx-wrapper .bx-next{right: -50px;background: url(../images/icon_arrow_3.png) right top no-repeat; background-size: auto 70px; }
+// /*hover*/
+// .gallery_3 .bx-wrapper .bx-prev:hover{ background-position: left bottom;}
+// .gallery_3 .bx-wrapper .bx-next:hover{ background-position: right bottom;}
+
+
+
+// /*組*/
+// .gallery_3 .run .inner .piece{ margin-right: 15px;}
+// .gallery_3 .run .inner .piece .btn{ margin: 0px;}
+
+// /*圖片*/
+// .gallery_3 .run .inner .piece a.pic{ display:block;}
+// .gallery_3 .run .inner .piece a.pic img{ display: none;}
 
 
 
 //相關推薦======================================== 
-.gallery_4{position: relative; }
-
+ .gallery_4 {position: relative;}
 /*外掛歸零*/
-.gallery_4 .bx-wrapper{ max-width: 1060px!important;}
-.gallery_4 .bx-wrapper .bx-viewport{  box-shadow:none; border:none; left:0px;}
+.gallery_4 .bx-wrapper {}
+.gallery_4 .bx-wrapper .bx-viewport {box-shadow: none;border: none; left: 0px;}
 
 
-
-/*pc (1024)*/
-@include breakpoint($pc){
-    .gallery_4 .bx-wrapper{ max-width: 840px!important;}
-}
-
-
-@media only screen and (max-width:768px) {
-   .gallery_4 .bx-wrapper{ max-width: 525px!important;} 
-}
 /*滾動組*/
-.gallery_4 .run{ @extend %clearfix; }
-.gallery_4 .run .inner{}
+.gallery_4 .run {}
+.gallery_4 .run .inner {}
 
-// 方向鍵
-.gallery_4 .bx-wrapper .bx-controls-direction a{ width: 24px; height: 34px;}
-.gallery_4 .bx-wrapper .bx-prev{left: -50px; background: url(../images/icon_arrow_3.png) left top no-repeat; background-size: auto 70px; }
-.gallery_4 .bx-wrapper .bx-next{right: -50px;background: url(../images/icon_arrow_3.png) right top no-repeat; background-size: auto 70px;}
+/* // 方向鍵 */
+.gallery_4 .bx-wrapper .bx-controls-direction a {width: 24px;height: 34px;}
+
+.gallery_4 .bx-wrapper .bx-prev{left: -50px;background: url(../images/icon_arrow_3.png) left top no-repeat;background-size: auto 70px;}
+/*有margin-left所以右邊會空出15px right少一點  */
+.gallery_4 .bx-wrapper .bx-next {right: -35px;background: url(../images/icon_arrow_3.png) right top no-repeat;background-size: auto 70px;}
 /*hover*/
-.gallery_4 .bx-wrapper .bx-prev:hover{ background-position: left bottom;}
-.gallery_4 .bx-wrapper .bx-next:hover{ background-position: right bottom;}
-/*組*/
-.gallery_4 .run .inner .piece{margin-right: 15px;}
 
+.gallery_4 .bx-wrapper .bx-prev:hover {
+    background-position: left bottom;
+}
+
+.gallery_4 .bx-wrapper .bx-next:hover {
+    background-position: right bottom;
+}
+/*組*/
+
+.gallery_4 .run .inner .piece {
+        /* margin-right: 15px;  */
+}
 /*圖片*/
-.gallery_4 .run .inner .piece a.pic{ display:block;}
-.gallery_4 .run .inner .piece a.pic img{ display: none;}
+
+.gallery_4 .run .inner .piece a.pic { display: block; margin-right: 15px;}
+
+
+.gallery_4 .run .inner .piece a.pic img {
+        display: none; 
+}

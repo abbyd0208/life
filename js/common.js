@@ -152,6 +152,44 @@ $(function () {
 });
 
 
+// 假input===================================
+$(function(){
 
+    function toggleMenu(e){
+        e.preventDefault();
+        var $this = $(this);
+        $this.toggleClass("show");
+    }
 
+    function sgetVal(e){
+        e.preventDefault();
+        var val = $(this).html();
+        $("#order").html(val);
+    }
 
+    var $selector1 = $("#select_box .item_1");
+    var $selector2 = $("#select_box .item_2");
+
+    $selector1.find("#order").on("click",toggleMenu);
+    $selector1.find(".sub>a").on("click",sgetVal);
+    $selector2.find("a").on("click",toggleMenu);
+
+});
+
+// range===================================
+$(function(){
+    var $range = $("#range");
+        $range.ionRangeSlider({
+        min: 0,
+        max: 5000,
+        from: 1000,
+        to: 4000,
+        type: 'double',
+        step: 1,
+        prefix: "$",
+        onFinish: function (data) {
+            alert("最低"+data.from+"元+最低金額"+data.to);
+        }
+    });
+    
+});

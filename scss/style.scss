@@ -16,8 +16,6 @@
 
 /* layout */
 @import "layout";
-// @import "nav";
-// @import "page/header";
 
 /* block */
 @import "block";
@@ -38,3 +36,6 @@
 @import "page/blog_detail";
 @import "page/onsale";
 @import "page/onsale_plus";
+
+/*顏色*/
+@import "theme";

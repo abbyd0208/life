@@ -24,14 +24,14 @@ a.btn.fb { display:inline-block; color: $white; background:$fb url(../images/Ei-
 
 /*標題=====================AB*/
 /*標題一*/
-h3.title_1{ text-align: center; border-bottom: 1px solid $gray; padding-bottom: 12px; margin-bottom: 20px;/**/ }
+h3.title_1{ text-align: center; border-bottom: 1px solid $gray; padding-bottom: 12px; margin-bottom: 20px;}
 h3.title_1.left{ text-align: left;}
 h3.title_1 a.btn_more{ display: inline-block; background: $gray;  font-size: 14px; color: $white; letter-spacing: 5px; padding: 3px 8px; border-radius: 50px; float: right;}
 h3.title_1 a.btn_more:hover{ background:$gray_light; }
 /*標題二*/
-h3.title_2{ font-size:18px; text-align: left; border-top: 1px solid $gray; padding-top: 15px;  margin-bottom: 20px;/**/ }
+h3.title_2{ font-size:18px; text-align: left; border-top: 1px solid $gray; padding-top: 15px;  margin-bottom: 20px;}
 /*標題三*/
-h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; background: $gray;  margin-bottom: 20px;/**/  }
+h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; background: $gray;  margin-bottom: 20px;}
 
 @include breakpoint($pad){
     h3.title_1.pc_only{ display: none;}
@@ -98,19 +98,16 @@ h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; b
 }
 
 
-
-
 /*banner*/
 .banner_1{ margin-bottom: 30px;}
 .banner_1 a{display: block; width:100%; height: 0; padding-bottom:32.5%; overflow: hidden;  }
 .banner_1 a img{width: 100%; height: auto;}
 
 
-
 /*分隔線========================*/
 .line_1 { width:100%; margin:0 auto 20px auto; }
-.line_1 span { display: inline-block; width: 60px; font-size:13px; vertical-align: middle; text-align: center; color:$gray_light;}
-.line_1 b { background: $gray_light; margin-top: 2px; display: inline-block; width: calc(50% - 30px); height: 1px; vertical-align: middle;}
+.line_1 span{ display: inline-block; width: 60px; font-size:13px; vertical-align: middle; text-align: center; color:$gray_light;}
+.line_1 b{ background: $gray_light; margin-top: 2px; display: inline-block; width: calc(50% - 30px); height: 1px; vertical-align: middle;}
 
 
 
@@ -134,7 +131,7 @@ h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; b
 .part_pager a.prev{ letter-spacing: 3px;}
 .part_pager > a:hover{ text-decoration: underline;}
 .part_pager li> span,.part_pager li > a{ width: 30px; height: 30px; line-height: 30px; margin:0 5px;}
-.part_pager li> span.current{  color: $white; background: $gray; border-radius: 50%;}
+.part_pager li> span.current{ color: $white; background: $gray; border-radius: 50%;}
 .part_pager li > a{  border-radius: 50%; }
 .part_pager li > a:hover{  color: $white; background:$gray_light;}
 
@@ -143,7 +140,7 @@ h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; b
 /*tab_1====================AB*/
 .tab_1{ clear: both; border: 1px solid color;}
 .tab_1 .tab_menu{ @extend %clearfix; border: 1px solid $gray;}
-.tab_1 .tab_menu a { padding: 10px; width:33.333%; border-right: 1px solid $gray_light ; color: $gray_light; text-align: center; letter-spacing: 3px; /*font-size:14px;*/ float: left }
+.tab_1 .tab_menu a { padding: 10px; width:33.333%; border-right: 1px solid $gray_light ; color: $gray_light; text-align: center; letter-spacing: 3px;  float: left }
 .tab_1 .tab_menu a:hover{ background: $gray_light; color: $white;}
 .tab_1 .tab_menu a:nth-last-of-type(1){ border: none;}
 .tab_1 .tab_menu a.current{ background: $gray; color: $white;}
@@ -163,7 +160,7 @@ h3.title_3{ font-size:18px; color: $white;  text-align: center; padding: 10px; b
 /*tab_2========================*/
 .tab_2 { margin-bottom:40px; }
 .tab_2 .tab_menu { } 
-.tab_2 .tab_menu a.btn { padding:5px 30px; background:#999; color:#fff; margin-bottom:0;}
+.tab_2 .tab_menu a.btn{ padding:5px 30px; background:#999; color:#fff; margin-bottom:0;}
 .tab_2 .tab_menu a.btn:nth-last-of-type(1) { margin-right:0;}
 .tab_2 .tab_menu a.btn.active { background: $white; color:#333; border:1px solid #999; border-bottom:none; position:relative; bottom:-1px;}
 .tab_2 .tab_content { background:$white; min-height:100px; border:1px solid #999; padding:20px;} 
@@ -329,7 +326,7 @@ background:url("../images/icon_arrow.svg") no-repeat right top; background-size:
 
 /* part_thumb_1 商品列表========================AB*/
 .part_thumb_1{ @extend %clearfix; clear: both; }
-.part_thumb_1 .piece{ display: inline-block; /*min-height: 405px;*/ vertical-align: top; width: 270px;  margin-bottom: 70px;  }
+.part_thumb_1 .piece{ display: inline-block; vertical-align: top; width: 270px;  margin-bottom: 70px;  }
 .part_thumb_1 .piece:nth-child(4n+1){clear: both;}
 .part_thumb_1 .piece:not(:nth-child(4n-4)){margin-right:34px;}
 .part_thumb_1 .piece a.pic{ width: 100%; height: 0; padding-bottom: 100%;  display: block; margin-bottom: 12px; overflow:hidden;}
@@ -464,7 +461,7 @@ background:url("../images/icon_arrow.svg") no-repeat right top; background-size:
 /*引言*/
 .story a { @include link ($red,$red); padding:3px 5px;}
 .story a:hover, .story a:active {text-decoration: underline;}
-.story blockquote { background:#efefef; border-bottom:2px solid $gray_light; border-radius:3px; padding:10px; margin-bottom:15px; box-shadow:0 2px 3px 0 rgba(0,0,0,0.1);}
+.story blockquote { background:$gray_light; border-bottom:2px solid $gray_light; border-radius:3px; padding:10px; margin-bottom:15px; box-shadow:0 2px 3px 0 rgba(0,0,0,0.1);}
 .story blockquote p { margin:0;}
 .story iframe { max-width:100%; height:auto;}
 /*table*/
@@ -472,4 +469,4 @@ background:url("../images/icon_arrow.svg") no-repeat right top; background-size:
 .story table caption { font-size:20px; color:rgba(2, 3, 47,0.8); margin-bottom:10px;}
 .story tr th { padding:5px; background:$gray; color:#fff; border-bottom:1px solid $gray_light;}
 .story tr td { padding:5px; border:1px solid $gray_light; color:$gray;}
-.story table tr:hover td { background:#f7f3ff;}
+.story table tr:hover td { background:$gray_light; }
