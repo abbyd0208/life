@@ -7,14 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/style.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<!-- InstanceBeginEditable name="js" -->
-	<!-- InstanceEndEditable -->
-<script src="js/common.js"></script>
+
 <!-- InstanceBeginEditable name="head" -->
 	<!-- InstanceEndEditable -->
 <!-- touch icon 開始 -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon.png" /> 
+<link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon.png"/> 
 <link rel="shortcut icon" sizes="192x192" href="images/touch-icon.png" />
 <!-- touch icon 結束 -->
 
@@ -39,11 +36,11 @@
                             <button class="btn_search" type="button" onclick="#">搜尋</button>
                         </form>
                     </div>
-                    <ul>
+                    <ul class="operate">
                         <li class="m">
                             <a class="blog" href="blog.htm"> 生活日誌</a>
                         </li>
-                        <li class="menu_hover">
+                        <li class="menu_hover pc_only">
                             <a class="member" href="login_sign_in.htm"> 會員專區
                             </a>
                             <div class="sub_menu">
@@ -301,19 +298,25 @@
                 </div>
             </div>
         </nav>
+        
+        <content>
         <!-- InstanceBeginEditable name="container" -->
 		<!--container_box 開始-->
 		<div class="container_box">
 			<!--container 開始-->
 			<div class="container">
 				<section class="layout_col_2 section_about_us">
-
+					<header>
+						<div class="part_breadcrumb_1">
+							<a href="#">關於我們</a> <span class="current">關於生活倉庫</span>
+						</div>
+					</header>
 					<div class="c1">
 						<nav class="side_nav">
 							<ul>
 								<li><a href="about_us.htm" class="active">關於生活倉庫</a></li>
 								<li><a href="about_us_business.htm">經營理念</a></li>
-								<li><a href="about_us_recruit.htm">人才招募</a></li>
+								<li><a href="#">人才招募</a></li>
 								<li><a href="about_us_privacy.htm">隱私權政策</a></li>
 								<li><a href="about_us_contact.htm">聯絡我們</a></li>
 							</ul>
@@ -396,5 +399,12 @@
     <!--wrapper 結束-->
 </div>
 <!--wrapper_box 結束-->
+
+<script src="js/jquery.js"></script>
+<!-- InstanceBeginEditable name="js" -->
+	<!-- InstanceEndEditable -->
+<script src="js/common.js"></script>
+
+
 </body>
 <!-- InstanceEnd --></html>

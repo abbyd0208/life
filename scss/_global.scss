@@ -12,7 +12,8 @@ body{ height:100%; font-size:16px; line-height:1.7; letter-spacing:0.5px; word-w
 
 
 /*預設連結狀態*/
-a:link, a:visited{ text-decoration:none;}
+a:link, a:visited{ color:$gray_dark; text-decoration:none;}
+a:hover, a:active{ color:$gray;}
 
 /*圖片無框*/
 a img { border:none;}

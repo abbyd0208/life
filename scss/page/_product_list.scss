@@ -13,10 +13,11 @@
 .section_product_list .select_box .select:nth-of-type(1){ margin-right: 15px;}
 
 .section_product_list .select_box a{color: $gray;}
-.section_product_list .select_box .item_1 a+.sub,.section_product_list .select_box .item_2 a+.sub{ border: 1px solid $gray; background: $white;}
+.section_product_list .select_box .item_1 a+.sub,.section_product_list .select_box .item_2 a+.sub{ border: 1px solid $gray; background: $white; }
 /*item_1============*/
 .section_product_list .select_box .item_1{ position: relative;}
-.section_product_list .select_box .item_1 a{ display: block; text-align: center; line-height: 45px;}
+.section_product_list .select_box .item_1>a,.section_product_list .select_box .item_2 a{ display: block; text-align: center; line-height: 45px;background: $white;}
+.section_product_list .select_box .item_1>a,.section_product_list .select_box .item_2>a{ padding-right: 15px; background: url(../images/icon_arrow_5.png) 90% 50% no-repeat; background-size: auto 20%; }
 // 次選單
 .section_product_list .select_box .item_1 a+.sub{ position: absolute; left: 0px; 
 top:45px;  z-index: 5; display: none;}
@@ -26,9 +27,10 @@ top:45px;  z-index: 5; display: none;}
 
 
 /*item_2===========*/
-.section_product_list .select_box .item_2 a{ display: block; text-align: center; line-height: 45px;}
+.section_product_list .select_box .item_2{position: relative; }
+
 // 次選單
-.section_product_list .select_box .item_2 a+.sub{ width: 258px; border: 1px solid $gray;  background: $white; padding: 20px; position: relative; z-index:5; display:none; }
+.section_product_list .select_box .item_2 a+.sub{ width: 258px; border: 1px solid $gray;  background: $white; padding: 20px; position: absolute; left: 0px; top: 45px; z-index:5; display:none; }
 .section_product_list .select_box .item_2 a.show +.sub { display: block;}
 /*range*/
 .section_product_list .select_box .item_2 .sub .select_range{ width: 100%; height: 120px; }
@@ -43,8 +45,9 @@ top:45px;  z-index: 5; display: none;}
 .section_product_list .select_box .item_2 .select_label label{ display: block; font-size: 16px;}  
 .section_product_list .select_box .item_2 .select_label input{ margin-right: 5px;}   
 /*oprate*/
-.section_product_list .select_box .item_2 .sub .oprate{ width: 120px; height: 30px; position: absolute; right: 0px; bottom: 10px; }
-.section_product_list .select_box .item_2 .sub .oprate input{ border:0px; background: transparent; letter-spacing: 3px; font-size: 16px; color: gray; }
+.section_product_list .select_box .item_2 .sub .oprate{ width: 110px; height: 30px; position: absolute; right: 0px; bottom: 10px; @extend %clearfix}
+.section_product_list .select_box .item_2 .sub .oprate input{ border:0px; background: transparent; letter-spacing: 3px; font-size: 16px; color: gray; float: left;}
+.section_product_list .select_box .item_2 .sub .oprate span{ float: left;}
 .section_product_list .select_box .item_2 .sub .oprate .btn_clean{}
 .section_product_list .select_box .item_2 .sub .oprate .btn_search{}
 
@@ -54,5 +57,5 @@ top:45px;  z-index: 5; display: none;}
 .section_product_list .select_box{ float: none; padding-top: 0px; margin-bottom: 30px;}
 .section_product_list .select_box .select{ width: 40%; margin: 0 6%; }
 .section_product_list .select_box .select:nth-of-type(1){margin-right: 0;}
-    
+.section_product_list .select_box .item_2 a+.sub{left: auto; right: 0px;}
 }
